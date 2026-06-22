@@ -3,75 +3,305 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index,follow">
 <title>Política de privacidad — Centela</title>
+<meta name="description" content="Política de privacidad de Centela: análisis antifraude 100% en tu dispositivo. No enviamos tus mensajes, SMS ni contactos a ningún servidor.">
 <style>
-  body{font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif;max-width:760px;margin:40px auto;padding:0 20px;color:#1a1a2e;line-height:1.6}
-  h1{color:#2563eb} h2{margin-top:1.6em} code{background:#eef;padding:1px 5px;border-radius:4px}
-  .box{background:#f4f6ff;border-left:4px solid #2563eb;padding:12px 16px;border-radius:6px}
+  :root{
+    --bg:#f6f8ff; --card:#ffffff; --ink:#101729; --muted:#5b6580;
+    --brand:#2f6bff; --brand2:#6c5ce7; --accent:#4fc3ff; --line:#e6ebf7;
+    --ok:#1aa260; --warn:#c9700a;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#0b1020; --card:#131b33; --ink:#eef2ff; --muted:#9aa6c4; --line:#243056; }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.65}
+  .wrap{max-width:820px;margin:0 auto;padding:0 20px 80px}
+  header.hero{background:linear-gradient(135deg,#0b1020,#15244c);color:#fff;padding:38px 0 30px;
+       border-bottom:3px solid var(--brand)}
+  .hero .wrap{display:flex;align-items:center;gap:18px;padding-bottom:0}
+  .shield{flex:0 0 auto;width:64px;height:64px}
+  .hero h1{margin:0;font-size:1.7rem;letter-spacing:.2px}
+  .hero p{margin:4px 0 0;color:#b9c4e6;font-size:.95rem}
+  .langbar{position:sticky;top:0;z-index:5;background:var(--card);border-bottom:1px solid var(--line);
+       padding:10px 0;box-shadow:0 2px 10px rgba(0,0,0,.04)}
+  .langbar .wrap{display:flex;flex-wrap:wrap;gap:8px;padding-bottom:0;align-items:center}
+  .langbar .lbl{font-size:.82rem;color:var(--muted);margin-right:4px}
+  .lang{border:1px solid var(--line);background:transparent;color:var(--ink);cursor:pointer;
+       padding:6px 12px;border-radius:999px;font-size:.85rem;transition:.15s}
+  .lang:hover{border-color:var(--brand)}
+  .lang[aria-pressed="true"]{background:var(--brand);border-color:var(--brand);color:#fff;font-weight:600}
+  .updated{color:var(--muted);font-size:.9rem;margin:22px 0 6px}
+  .summary{background:linear-gradient(135deg,rgba(47,107,255,.10),rgba(108,92,231,.10));
+       border:1px solid var(--line);border-left:4px solid var(--brand);border-radius:12px;
+       padding:16px 18px;margin:14px 0 8px}
+  .summary b{color:var(--brand)}
+  section.card{background:var(--card);border:1px solid var(--line);border-radius:14px;
+       padding:18px 20px;margin:16px 0;box-shadow:0 1px 3px rgba(16,23,41,.04)}
+  section.card h2{margin:.1em 0 .5em;font-size:1.12rem;color:var(--ink)}
+  section.card h2 .n{color:var(--brand);font-weight:700;margin-right:.45em}
+  ul{margin:.4em 0;padding-left:1.2em}
+  li{margin:.32em 0}
+  .pill{display:inline-block;font-size:.72rem;font-weight:600;padding:2px 9px;border-radius:999px;
+       background:rgba(26,162,96,.14);color:var(--ok);margin-left:6px;vertical-align:middle}
+  .pill.warn{background:rgba(201,112,10,.14);color:var(--warn)}
+  a{color:var(--brand)}
+  code{background:rgba(47,107,255,.10);padding:1px 6px;border-radius:5px;font-size:.92em}
+  footer{color:var(--muted);font-size:.85rem;text-align:center;margin-top:30px}
+  .perm{font-weight:600}
 </style>
 </head>
 <body>
-<h1>Política de privacidad de Centela</h1>
-<p><em>Última actualización: 21 de junio de 2026</em></p>
+<header class="hero">
+  <div class="wrap">
+    <svg class="shield" viewBox="0 0 108 108" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <linearGradient id="sh" x1="31" y1="28" x2="77" y2="83" gradientUnits="userSpaceOnUse">
+          <stop offset="0" stop-color="#4fc3ff"/><stop offset="1" stop-color="#6c5ce7"/>
+        </linearGradient>
+      </defs>
+      <path d="M54,24 L80,34 L80,58 C80,73 69,82 54,86 C39,82 28,73 28,58 L28,34 Z" fill="#ffffff22"/>
+      <path d="M54,28 L77,37 L77,58 C77,71 67,79 54,83 C41,79 31,71 31,58 L31,37 Z" fill="url(#sh)"/>
+      <path d="M44,56 L51,64 L66,46" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <div>
+      <h1 id="t-title">Política de privacidad de Centela</h1>
+      <p id="t-tag">Protección antifraude que funciona dentro de tu teléfono.</p>
+    </div>
+  </div>
+</header>
 
-<div class="box">
-<strong>Resumen:</strong> Centela analiza mensajes, enlaces y llamadas <strong>dentro de tu
-teléfono</strong>. <strong>No enviamos a ningún servidor</strong> tus mensajes, tus SMS, tus
-contactos ni ningún dato personal. No vendemos datos. No mostramos publicidad.
-</div>
+<nav class="langbar" aria-label="Idioma / Language">
+  <div class="wrap">
+    <span class="lbl" id="t-langlabel">Idioma:</span>
+    <span id="langbtns"></span>
+  </div>
+</nav>
 
-<h2>1. Qué hace Centela</h2>
-<p>Centela es una aplicación antifraude. Examina el contenido que tú le indicas o que llega a
-tu teléfono (SMS, notificaciones de mensajería, números de llamada, capturas de pantalla) y te
-avisa si parece una estafa o phishing. <strong>Todo el análisis ocurre en el propio
-dispositivo</strong>, sin conexión a servidores nuestros.</p>
+<main class="wrap">
+  <p class="updated" id="t-updated"></p>
+  <div class="summary" id="t-summary"></div>
+  <div id="content"></div>
+  <footer id="t-footer"></footer>
+</main>
 
-<h2>2. Datos que NO recogemos</h2>
-<ul>
-<li>No enviamos tus SMS ni el contenido de tus mensajes a ningún servidor.</li>
-<li>No accedemos ni subimos tu agenda de contactos.</li>
-<li>No recopilamos tu ubicación, tu identidad ni tu actividad.</li>
-<li>No usamos publicidad ni rastreadores de terceros.</li>
-</ul>
+<script>
+/* Contenido en los 7 idiomas que soporta Centela.
+   Estructura idéntica por idioma: name, dir, title, tag, updated, summary,
+   sections[{h, html}], footer. El selector cambia el idioma sin recargar. */
+const EMAIL = "contact.us.apps.world@gmail.com";
+const mail = '<a href="mailto:'+EMAIL+'">'+EMAIL+'</a>';
+const OK = (s)=> '<span class="pill">'+s+'</span>';
+const WARN = (s)=> '<span class="pill warn">'+s+'</span>';
 
-<h2>3. Permisos que pedimos y por qué (uso local)</h2>
-<ul>
-<li><strong>Leer SMS</strong>: para revisar, <em>solo en tu teléfono</em>, tus SMS anteriores
-en busca de fraudes pasados. El contenido no sale del dispositivo.</li>
-<li><strong>Acceso a notificaciones</strong>: para que el escudo analice los mensajes
-entrantes (WhatsApp, SMS, etc.) y te avise. El análisis es local.</li>
-<li><strong>Pantalla/filtro de llamadas</strong>: para comprobar la reputación de un número y
-avisarte de posible spam antes de responder.</li>
-<li><strong>Cámara y archivos</strong>: para leer el texto de una captura o foto (OCR) que tú
-elijas analizar. Las imágenes no se suben.</li>
-<li><strong>Notificaciones</strong>: para mostrarte los avisos de peligro.</li>
-</ul>
+const T = {
+es:{ name:"Español", dir:"ltr",
+  title:"Política de privacidad de Centela",
+  tag:"Protección antifraude que funciona dentro de tu teléfono.",
+  updated:"Última actualización: 22 de junio de 2026",
+  langlabel:"Idioma:",
+  summary:"<b>En resumen:</b> Centela analiza mensajes, enlaces, números y capturas <b>dentro de tu teléfono</b>. <b>No enviamos a ningún servidor</b> tus mensajes, SMS, contactos ni datos personales. No hay cuentas de usuario. No vendemos datos. No mostramos publicidad ni usamos rastreadores.",
+  sections:[
+    {h:"Quiénes somos", html:"Centela es una aplicación antifraude para Android, desarrollada de forma independiente. No requiere registro ni cuenta. Para cualquier consulta sobre privacidad puedes escribir a "+mail+"."},
+    {h:"Nuestro principio: todo ocurre en tu dispositivo", html:"El análisis de mensajes, enlaces, números de teléfono y texto de imágenes se realiza <b>íntegramente en tu teléfono</b>. Centela <b>no dispone de servidores</b> donde se guarden tus datos y <b>no existe ninguna cuenta de usuario</b>. Lo que se queda en tu móvil, se queda en tu móvil."},
+    {h:"Datos que NO recogemos", html:"<ul><li>No enviamos tus SMS ni el contenido de tus mensajes a ningún servidor.</li><li>No accedemos ni subimos tu agenda de contactos.</li><li>No recopilamos tu ubicación, tu identidad ni tu actividad.</li><li>No usamos publicidad ni rastreadores de terceros.</li><li>No creamos perfiles ni vendemos información.</li></ul>"},
+    {h:"Qué procesa Centela (en local)", html:"Para protegerte, Centela examina en tu dispositivo: el texto que tú le pegas o compartes, los SMS (si das permiso), las notificaciones de apps de mensajería, el número de las llamadas entrantes y el texto de las capturas o fotos que elijas (OCR). Este procesamiento es temporal y local; no se transmite."},
+    {h:"Permisos que pedimos y por qué", html:"<ul><li><span class='perm'>Leer SMS</span>: revisar <em>solo en tu teléfono</em> tus SMS anteriores en busca de fraudes. El contenido no sale del dispositivo. "+OK("local")+"</li><li><span class='perm'>Acceso a notificaciones</span>: que el escudo analice los mensajes entrantes (WhatsApp, SMS…) y te avise. "+OK("local")+"</li><li><span class='perm'>Filtro de llamadas</span>: comprobar la reputación de un número y avisarte de posible spam antes de responder.</li><li><span class='perm'>Cámara y archivos</span>: leer el texto de una captura o foto que tú elijas analizar. Las imágenes no se suben. "+OK("local")+"</li><li><span class='perm'>Notificaciones</span>: mostrarte los avisos de peligro y de protección.</li><li><span class='perm'>Instalar actualizaciones</span>: que Centela pueda actualizarse a sí misma.</li><li><span class='perm'>Internet</span>: descargar mejoras de detección y actualizaciones (ver abajo).</li></ul>"},
+    {h:"Conexiones a Internet", html:"Centela usa Internet para <b>descargar hacia tu teléfono</b>: listas de fraude conocidas, actualizaciones de la app y, en móviles compatibles, el modelo de inteligencia artificial (opcional). Son descargas; <b>no se suben datos tuyos</b>.<br><br><b>Reputación de números "+WARN("excepción")+":</b> cuando <em>tú</em> buscas un número en la app, Centela consulta una web pública de reputación (responderono.es, listaspam.com) y le envía <em>únicamente ese número</em> para decirte si es spam o fraude. En las <b>llamadas entrantes</b> esta consulta está <b>desactivada por defecto</b>: solo se realiza si tú la activas; si no, la llamada se clasifica solo en tu teléfono. Nunca se envía tu agenda ni otros datos."},
+    {h:"Qué se guarda en tu dispositivo", html:"Centela guarda un <b>historial local</b> de tus análisis para no repetir avisos y mejorar. Por privacidad guarda una <b>huella (hash)</b> y una vista previa corta, <b>no el texto completo</b>. Estos datos viven en tu teléfono y <b>se borran al desinstalar</b> la app. También puedes borrar el historial desde la propia aplicación."},
+    {h:"Sin publicidad ni rastreadores", html:"Centela no incluye anuncios, SDKs publicitarios, balizas de seguimiento ni analítica de terceros. Nadie nos paga por tus datos porque no los recogemos."},
+    {h:"Menores y todas las edades", html:"Centela está diseñada para proteger del fraude a cualquier edad y no recoge datos personales, por lo que es apta para todos los públicos, incluidos menores y personas mayores."},
+    {h:"Tus derechos (RGPD)", html:"Como Centela <b>no almacena datos personales tuyos en ningún servidor</b>, el control es totalmente tuyo: los datos están solo en tu dispositivo. Puedes ejercer de forma inmediata tus derechos de acceso, rectificación y supresión <b>borrando el historial en la app o desinstalándola</b>. Si tienes dudas, escríbenos a "+mail+"."},
+    {h:"Seguridad", html:"El análisis local reduce al mínimo la exposición de tus datos. Las descargas se realizan por conexión cifrada (HTTPS) y se verifica su integridad. La app comprueba su propia firma para detectar copias manipuladas."},
+    {h:"Cambios en esta política", html:"Si modificamos esta política, actualizaremos esta página y su fecha. Los cambios relevantes se reflejarán aquí."},
+    {h:"Contacto", html:"Para cualquier duda sobre privacidad: "+mail+"."}
+  ],
+  footer:"Centela — Antifraude on-device. Esta página es informativa y no constituye asesoramiento legal."
+},
 
-<h2>4. Datos que se guardan (en tu dispositivo)</h2>
-<p>Centela guarda un historial local de tus análisis para aprender y no repetir avisos. Por
-privacidad, guarda una <strong>huella</strong> (hash) y una vista previa, <strong>no el texto
-completo</strong>. Estos datos viven en tu teléfono y se borran al desinstalar la app.</p>
+en:{ name:"English", dir:"ltr",
+  title:"Centela Privacy Policy",
+  tag:"Anti-fraud protection that runs inside your phone.",
+  updated:"Last updated: 22 June 2026",
+  langlabel:"Language:",
+  summary:"<b>In short:</b> Centela analyses messages, links, numbers and screenshots <b>inside your phone</b>. We <b>never send</b> your messages, SMS, contacts or personal data to any server. There are no user accounts. We don't sell data. We show no ads and use no trackers.",
+  sections:[
+    {h:"Who we are", html:"Centela is an independently developed anti-fraud app for Android. No sign-up or account is required. For any privacy question, write to "+mail+"."},
+    {h:"Our principle: everything happens on your device", html:"Analysis of messages, links, phone numbers and image text happens <b>entirely on your phone</b>. Centela <b>has no servers</b> storing your data and there is <b>no user account</b>. What stays on your phone, stays on your phone."},
+    {h:"Data we do NOT collect", html:"<ul><li>We never send your SMS or message content to any server.</li><li>We don't access or upload your contacts.</li><li>We don't collect your location, identity or activity.</li><li>We use no third-party ads or trackers.</li><li>We build no profiles and sell no information.</li></ul>"},
+    {h:"What Centela processes (locally)", html:"To protect you, Centela examines on your device: text you paste or share, your SMS (if you grant permission), messaging-app notifications, the number of incoming calls, and the text of screenshots or photos you choose (OCR). This processing is temporary and local; it is not transmitted."},
+    {h:"Permissions we request and why", html:"<ul><li><span class='perm'>Read SMS</span>: check your past SMS for fraud <em>only on your phone</em>. Content never leaves the device. "+OK("local")+"</li><li><span class='perm'>Notification access</span>: let the shield analyse incoming messages (WhatsApp, SMS…) and warn you. "+OK("local")+"</li><li><span class='perm'>Call filtering</span>: check a number's reputation and warn you about possible spam before you answer.</li><li><span class='perm'>Camera and files</span>: read text from a screenshot or photo you choose to analyse. Images are not uploaded. "+OK("local")+"</li><li><span class='perm'>Notifications</span>: show you danger and protection alerts.</li><li><span class='perm'>Install updates</span>: let Centela update itself.</li><li><span class='perm'>Internet</span>: download detection improvements and updates (see below).</li></ul>"},
+    {h:"Internet connections", html:"Centela uses the Internet to <b>download to your phone</b>: known-fraud lists, app updates and, on capable phones, the optional AI model. These are downloads; <b>no data of yours is uploaded</b>.<br><br><b>Number reputation "+WARN("exception")+":</b> when <em>you</em> look up a number in the app, Centela queries a public reputation site (responderono.es, listaspam.com) and sends <em>only that number</em> to tell you if it is spam or fraud. For <b>incoming calls</b> this lookup is <b>off by default</b>: it only runs if you enable it; otherwise the call is classified on your phone only. Your contacts or other data are never sent."},
+    {h:"What is stored on your device", html:"Centela keeps a <b>local history</b> of your analyses to avoid repeating warnings and to improve. For privacy it stores a <b>fingerprint (hash)</b> and a short preview, <b>not the full text</b>. This data lives on your phone and is <b>deleted when you uninstall</b>. You can also clear the history from within the app."},
+    {h:"No ads, no trackers", html:"Centela contains no ads, ad SDKs, tracking beacons or third-party analytics. No one pays us for your data, because we don't collect it."},
+    {h:"Children and all ages", html:"Centela is designed to protect people of any age from fraud and collects no personal data, so it is suitable for everyone, including children and older adults."},
+    {h:"Your rights (GDPR)", html:"Because Centela <b>stores no personal data of yours on any server</b>, you are in full control: your data lives only on your device. You can exercise your rights of access, rectification and erasure immediately by <b>clearing the history in the app or uninstalling it</b>. If in doubt, contact "+mail+"."},
+    {h:"Security", html:"Local analysis minimises exposure of your data. Downloads use an encrypted connection (HTTPS) and their integrity is verified. The app checks its own signature to detect tampered copies."},
+    {h:"Changes to this policy", html:"If we change this policy, we will update this page and its date. Material changes will be reflected here."},
+    {h:"Contact", html:"For any privacy question: "+mail+"."}
+  ],
+  footer:"Centela — On-device anti-fraud. This page is informational and not legal advice."
+},
 
-<h2>5. Conexiones a Internet</h2>
-<p>Centela usa Internet para <strong>descargar</strong> mejoras de detección (listas de
-fraude conocidas) y, en móviles compatibles, el modelo de inteligencia artificial. Son
-descargas hacia tu teléfono; <strong>no se suben datos tuyos</strong>.</p>
-<p><strong>Reputación de números (excepción explicada):</strong> cuando <em>tú</em> buscas un
-número de teléfono en la app, Centela consulta una web pública de reputación
-(responderono.es) y para ello le envía ese número. Es necesario para decirte si el número es
-spam o fraude. En las <strong>llamadas entrantes</strong>, esta consulta está
-<strong>desactivada por defecto</strong>: solo se hace si tú activas esa opción; si no, la
-llamada se clasifica únicamente en tu teléfono. Nunca enviamos tu agenda ni otros datos.</p>
+fr:{ name:"Français", dir:"ltr",
+  title:"Politique de confidentialité de Centela",
+  tag:"Une protection antifraude qui fonctionne dans ton téléphone.",
+  updated:"Dernière mise à jour : 22 juin 2026",
+  langlabel:"Langue :",
+  summary:"<b>En bref :</b> Centela analyse les messages, liens, numéros et captures <b>dans ton téléphone</b>. Nous <b>n'envoyons jamais</b> tes messages, SMS, contacts ou données personnelles à un serveur. Aucun compte utilisateur. Nous ne vendons pas de données. Aucune publicité, aucun traceur.",
+  sections:[
+    {h:"Qui sommes-nous", html:"Centela est une application antifraude indépendante pour Android. Aucune inscription ni compte n'est requis. Pour toute question sur la confidentialité, écris à "+mail+"."},
+    {h:"Notre principe : tout se passe sur ton appareil", html:"L'analyse des messages, liens, numéros et textes d'images se fait <b>entièrement sur ton téléphone</b>. Centela <b>n'a aucun serveur</b> stockant tes données et il n'y a <b>aucun compte utilisateur</b>. Ce qui reste sur ton téléphone reste sur ton téléphone."},
+    {h:"Données que nous ne collectons PAS", html:"<ul><li>Nous n'envoyons jamais tes SMS ni le contenu de tes messages à un serveur.</li><li>Nous n'accédons pas à tes contacts et ne les téléversons pas.</li><li>Nous ne collectons ni ta position, ni ton identité, ni ton activité.</li><li>Aucune publicité ni traceur tiers.</li><li>Aucun profilage, aucune vente d'informations.</li></ul>"},
+    {h:"Ce que Centela traite (en local)", html:"Pour te protéger, Centela examine sur ton appareil : le texte que tu colles ou partages, tes SMS (si tu l'autorises), les notifications des applis de messagerie, le numéro des appels entrants et le texte des captures ou photos que tu choisis (OCR). Ce traitement est temporaire et local ; il n'est pas transmis."},
+    {h:"Autorisations demandées et pourquoi", html:"<ul><li><span class='perm'>Lire les SMS</span> : vérifier tes anciens SMS contre la fraude <em>uniquement sur ton téléphone</em>. Le contenu ne quitte pas l'appareil. "+OK("local")+"</li><li><span class='perm'>Accès aux notifications</span> : que le bouclier analyse les messages entrants (WhatsApp, SMS…) et t'alerte. "+OK("local")+"</li><li><span class='perm'>Filtrage des appels</span> : vérifier la réputation d'un numéro et t'avertir d'un spam possible avant de répondre.</li><li><span class='perm'>Appareil photo et fichiers</span> : lire le texte d'une capture ou photo que tu choisis. Les images ne sont pas téléversées. "+OK("local")+"</li><li><span class='perm'>Notifications</span> : t'afficher les alertes de danger et de protection.</li><li><span class='perm'>Installer les mises à jour</span> : permettre à Centela de se mettre à jour.</li><li><span class='perm'>Internet</span> : télécharger des améliorations de détection et des mises à jour (voir ci-dessous).</li></ul>"},
+    {h:"Connexions Internet", html:"Centela utilise Internet pour <b>télécharger vers ton téléphone</b> : listes de fraude connues, mises à jour et, sur les téléphones compatibles, le modèle d'IA (optionnel). Ce sont des téléchargements ; <b>aucune de tes données n'est envoyée</b>.<br><br><b>Réputation des numéros "+WARN("exception")+" :</b> quand <em>tu</em> recherches un numéro dans l'appli, Centela interroge un site public de réputation (responderono.es, listaspam.com) et lui envoie <em>uniquement ce numéro</em>. Pour les <b>appels entrants</b>, cette requête est <b>désactivée par défaut</b> : elle n'a lieu que si tu l'actives ; sinon l'appel est classé sur ton téléphone uniquement. Tes contacts ou autres données ne sont jamais envoyés."},
+    {h:"Ce qui est stocké sur ton appareil", html:"Centela conserve un <b>historique local</b> de tes analyses pour ne pas répéter les alertes et s'améliorer. Par souci de confidentialité, il stocke une <b>empreinte (hash)</b> et un court aperçu, <b>pas le texte complet</b>. Ces données vivent sur ton téléphone et sont <b>supprimées à la désinstallation</b>. Tu peux aussi effacer l'historique depuis l'appli."},
+    {h:"Aucune publicité, aucun traceur", html:"Centela ne contient ni publicité, ni SDK publicitaire, ni balise de suivi, ni analytique tierce. Personne ne nous paie pour tes données, car nous ne les collectons pas."},
+    {h:"Mineurs et tous les âges", html:"Centela est conçue pour protéger de la fraude à tout âge et ne collecte aucune donnée personnelle ; elle convient donc à tout le monde, y compris les mineurs et les personnes âgées."},
+    {h:"Tes droits (RGPD)", html:"Comme Centela <b>ne stocke aucune de tes données personnelles sur un serveur</b>, tu gardes le contrôle total : tes données ne sont que sur ton appareil. Tu peux exercer immédiatement tes droits d'accès, de rectification et d'effacement en <b>effaçant l'historique dans l'appli ou en la désinstallant</b>. En cas de doute, contacte "+mail+"."},
+    {h:"Sécurité", html:"L'analyse locale réduit au minimum l'exposition de tes données. Les téléchargements utilisent une connexion chiffrée (HTTPS) et leur intégrité est vérifiée. L'appli vérifie sa propre signature pour détecter les copies altérées."},
+    {h:"Modifications de cette politique", html:"Si nous modifions cette politique, nous mettrons à jour cette page et sa date. Les changements importants y seront reflétés."},
+    {h:"Contact", html:"Pour toute question sur la confidentialité : "+mail+"."}
+  ],
+  footer:"Centela — Antifraude sur l'appareil. Cette page est informative et ne constitue pas un conseil juridique."
+},
 
-<h2>6. Menores y todas las edades</h2>
-<p>Centela está pensada para protegerse del fraude a cualquier edad y no recoge datos
-personales, por lo que es apta para todos los públicos.</p>
+pl:{ name:"Polski", dir:"ltr",
+  title:"Polityka prywatności Centela",
+  tag:"Ochrona przed oszustwami działająca w Twoim telefonie.",
+  updated:"Ostatnia aktualizacja: 22 czerwca 2026",
+  langlabel:"Język:",
+  summary:"<b>W skrócie:</b> Centela analizuje wiadomości, linki, numery i zrzuty ekranu <b>w Twoim telefonie</b>. <b>Nigdy nie wysyłamy</b> Twoich wiadomości, SMS-ów, kontaktów ani danych osobowych na żaden serwer. Brak kont użytkownika. Nie sprzedajemy danych. Brak reklam i śledzenia.",
+  sections:[
+    {h:"Kim jesteśmy", html:"Centela to niezależnie tworzona aplikacja antyfraudowa na Androida. Nie wymaga rejestracji ani konta. W sprawach prywatności pisz na "+mail+"."},
+    {h:"Nasza zasada: wszystko dzieje się na Twoim urządzeniu", html:"Analiza wiadomości, linków, numerów telefonów i tekstu z obrazów odbywa się <b>w całości w Twoim telefonie</b>. Centela <b>nie ma serwerów</b> przechowujących Twoje dane i <b>nie ma konta użytkownika</b>. Co zostaje w telefonie, zostaje w telefonie."},
+    {h:"Danych, których NIE zbieramy", html:"<ul><li>Nigdy nie wysyłamy Twoich SMS-ów ani treści wiadomości na żaden serwer.</li><li>Nie sięgamy po Twoje kontakty i ich nie przesyłamy.</li><li>Nie zbieramy lokalizacji, tożsamości ani aktywności.</li><li>Brak reklam i zewnętrznych modułów śledzących.</li><li>Nie tworzymy profili i nie sprzedajemy informacji.</li></ul>"},
+    {h:"Co Centela przetwarza (lokalnie)", html:"Aby Cię chronić, Centela analizuje na Twoim urządzeniu: tekst, który wklejasz lub udostępniasz, Twoje SMS-y (za zgodą), powiadomienia komunikatorów, numer połączeń przychodzących oraz tekst zrzutów lub zdjęć, które wybierzesz (OCR). To przetwarzanie jest tymczasowe i lokalne; nie jest przesyłane."},
+    {h:"O jakie uprawnienia prosimy i dlaczego", html:"<ul><li><span class='perm'>Czytanie SMS</span>: sprawdzanie dawnych SMS-ów pod kątem oszustw <em>tylko w telefonie</em>. Treść nie opuszcza urządzenia. "+OK("lokalnie")+"</li><li><span class='perm'>Dostęp do powiadomień</span>: aby tarcza analizowała wiadomości przychodzące (WhatsApp, SMS…) i ostrzegała. "+OK("lokalnie")+"</li><li><span class='perm'>Filtr połączeń</span>: sprawdzenie reputacji numeru i ostrzeżenie o możliwym spamie, zanim odbierzesz.</li><li><span class='perm'>Aparat i pliki</span>: odczyt tekstu ze zrzutu lub zdjęcia, które wybierzesz. Obrazy nie są przesyłane. "+OK("lokalnie")+"</li><li><span class='perm'>Powiadomienia</span>: pokazywanie ostrzeżeń o zagrożeniu i o ochronie.</li><li><span class='perm'>Instalowanie aktualizacji</span>: aby Centela mogła się aktualizować.</li><li><span class='perm'>Internet</span>: pobieranie ulepszeń wykrywania i aktualizacji (poniżej).</li></ul>"},
+    {h:"Połączenia internetowe", html:"Centela używa internetu do <b>pobierania na Twój telefon</b>: list znanych oszustw, aktualizacji aplikacji oraz – na zdolnych telefonach – opcjonalnego modelu AI. To pobieranie; <b>żadne Twoje dane nie są wysyłane</b>.<br><br><b>Reputacja numerów "+WARN("wyjątek")+":</b> gdy <em>Ty</em> wyszukujesz numer w aplikacji, Centela odpytuje publiczny serwis reputacji (responderono.es, listaspam.com) i wysyła <em>tylko ten numer</em>. Dla <b>połączeń przychodzących</b> to zapytanie jest <b>domyślnie wyłączone</b>: działa tylko, jeśli je włączysz; w innym wypadku połączenie jest klasyfikowane wyłącznie w telefonie. Twoje kontakty ani inne dane nigdy nie są wysyłane."},
+    {h:"Co jest przechowywane na Twoim urządzeniu", html:"Centela przechowuje <b>lokalną historię</b> analiz, aby nie powtarzać ostrzeżeń i się doskonalić. Dla prywatności zapisuje <b>odcisk (hash)</b> i krótki podgląd, <b>nie pełny tekst</b>. Te dane są w Twoim telefonie i <b>znikają po odinstalowaniu</b>. Historię możesz też wyczyścić w aplikacji."},
+    {h:"Bez reklam i śledzenia", html:"Centela nie zawiera reklam, reklamowych SDK, znaczników śledzących ani zewnętrznej analityki. Nikt nam nie płaci za Twoje dane, bo ich nie zbieramy."},
+    {h:"Dzieci i każdy wiek", html:"Centela chroni przed oszustwami w każdym wieku i nie zbiera danych osobowych, więc jest odpowiednia dla wszystkich, w tym dzieci i osób starszych."},
+    {h:"Twoje prawa (RODO)", html:"Ponieważ Centela <b>nie przechowuje Twoich danych osobowych na żadnym serwerze</b>, masz pełną kontrolę: dane są tylko na Twoim urządzeniu. Prawa dostępu, sprostowania i usunięcia realizujesz natychmiast, <b>czyszcząc historię w aplikacji lub ją odinstalowując</b>. W razie wątpliwości pisz na "+mail+"."},
+    {h:"Bezpieczeństwo", html:"Analiza lokalna minimalizuje ekspozycję danych. Pobieranie odbywa się przez szyfrowane połączenie (HTTPS) z weryfikacją integralności. Aplikacja sprawdza własny podpis, by wykryć zmodyfikowane kopie."},
+    {h:"Zmiany w polityce", html:"Jeśli zmienimy tę politykę, zaktualizujemy tę stronę i jej datę. Istotne zmiany pojawią się tutaj."},
+    {h:"Kontakt", html:"W sprawach prywatności: "+mail+"."}
+  ],
+  footer:"Centela — Antyfraud na urządzeniu. Ta strona ma charakter informacyjny i nie stanowi porady prawnej."
+},
 
-<h2>7. Cambios</h2>
-<p>Si cambiamos esta política, actualizaremos esta página con una nueva fecha.</p>
+ru:{ name:"Русский", dir:"ltr",
+  title:"Политика конфиденциальности Centela",
+  tag:"Защита от мошенничества, работающая внутри вашего телефона.",
+  updated:"Последнее обновление: 22 июня 2026",
+  langlabel:"Язык:",
+  summary:"<b>Кратко:</b> Centela анализирует сообщения, ссылки, номера и скриншоты <b>внутри вашего телефона</b>. Мы <b>никогда не отправляем</b> ваши сообщения, SMS, контакты или личные данные на сервер. Учётных записей нет. Мы не продаём данные. Нет рекламы и трекеров.",
+  sections:[
+    {h:"Кто мы", html:"Centela — независимо разработанное приложение против мошенничества для Android. Регистрация и учётная запись не нужны. По вопросам конфиденциальности пишите на "+mail+"."},
+    {h:"Наш принцип: всё происходит на вашем устройстве", html:"Анализ сообщений, ссылок, номеров и текста с изображений выполняется <b>полностью на вашем телефоне</b>. У Centela <b>нет серверов</b>, хранящих ваши данные, и <b>нет учётной записи</b>. Что остаётся на телефоне — остаётся на телефоне."},
+    {h:"Данные, которые мы НЕ собираем", html:"<ul><li>Мы никогда не отправляем ваши SMS или содержимое сообщений на сервер.</li><li>Мы не получаем доступ к контактам и не загружаем их.</li><li>Мы не собираем местоположение, личность или активность.</li><li>Нет сторонней рекламы и трекеров.</li><li>Мы не создаём профили и не продаём информацию.</li></ul>"},
+    {h:"Что обрабатывает Centela (локально)", html:"Чтобы защитить вас, Centela анализирует на устройстве: текст, который вы вставляете или передаёте, ваши SMS (с разрешения), уведомления мессенджеров, номер входящих звонков и текст выбранных вами скриншотов или фото (OCR). Эта обработка временная и локальная; она не передаётся."},
+    {h:"Какие разрешения мы запрашиваем и зачем", html:"<ul><li><span class='perm'>Чтение SMS</span>: проверка прошлых SMS на мошенничество <em>только на телефоне</em>. Содержимое не покидает устройство. "+OK("локально")+"</li><li><span class='perm'>Доступ к уведомлениям</span>: чтобы щит анализировал входящие сообщения (WhatsApp, SMS…) и предупреждал вас. "+OK("локально")+"</li><li><span class='perm'>Фильтр звонков</span>: проверка репутации номера и предупреждение о спаме до ответа.</li><li><span class='perm'>Камера и файлы</span>: чтение текста с выбранного скриншота или фото. Изображения не загружаются. "+OK("локально")+"</li><li><span class='perm'>Уведомления</span>: показ предупреждений об опасности и о защите.</li><li><span class='perm'>Установка обновлений</span>: чтобы Centela могла обновляться сама.</li><li><span class='perm'>Интернет</span>: загрузка улучшений обнаружения и обновлений (см. ниже).</li></ul>"},
+    {h:"Интернет-соединения", html:"Centela использует интернет для <b>загрузки на ваш телефон</b>: списков известного мошенничества, обновлений приложения и — на подходящих телефонах — необязательной модели ИИ. Это загрузки; <b>ваши данные не отправляются</b>.<br><br><b>Репутация номеров "+WARN("исключение")+":</b> когда <em>вы</em> ищете номер в приложении, Centela обращается к публичному сервису репутации (responderono.es, listaspam.com) и отправляет <em>только этот номер</em>. Для <b>входящих звонков</b> этот запрос <b>отключён по умолчанию</b>: он выполняется только если вы его включите; иначе звонок классифицируется только на телефоне. Ваши контакты и другие данные никогда не отправляются."},
+    {h:"Что хранится на вашем устройстве", html:"Centela хранит <b>локальную историю</b> анализов, чтобы не повторять предупреждения и совершенствоваться. Ради конфиденциальности хранится <b>отпечаток (хеш)</b> и короткий предпросмотр, <b>а не полный текст</b>. Эти данные находятся на телефоне и <b>удаляются при удалении</b> приложения. Историю также можно очистить в приложении."},
+    {h:"Без рекламы и трекеров", html:"В Centela нет рекламы, рекламных SDK, маяков слежения или сторонней аналитики. Нам никто не платит за ваши данные, потому что мы их не собираем."},
+    {h:"Дети и любой возраст", html:"Centela создана, чтобы защищать от мошенничества в любом возрасте, и не собирает личных данных, поэтому подходит всем, включая детей и пожилых людей."},
+    {h:"Ваши права (GDPR)", html:"Поскольку Centela <b>не хранит ваши личные данные на сервере</b>, контроль полностью за вами: данные только на вашем устройстве. Права на доступ, исправление и удаление вы реализуете мгновенно, <b>очистив историю в приложении или удалив его</b>. При сомнениях пишите на "+mail+"."},
+    {h:"Безопасность", html:"Локальный анализ сводит к минимуму раскрытие ваших данных. Загрузки выполняются по зашифрованному соединению (HTTPS) с проверкой целостности. Приложение проверяет собственную подпись, чтобы выявить изменённые копии."},
+    {h:"Изменения в политике", html:"Если мы изменим эту политику, мы обновим эту страницу и её дату. Существенные изменения будут отражены здесь."},
+    {h:"Контакт", html:"По вопросам конфиденциальности: "+mail+"."}
+  ],
+  footer:"Centela — защита от мошенничества на устройстве. Эта страница носит информационный характер и не является юридической консультацией."
+},
 
-<h2>8. Contacto</h2>
-<p>Para cualquier duda sobre privacidad: <a href="mailto:contact.us.apps.world@gmail.com">contact.us.apps.world@gmail.com</a></p>
+hi:{ name:"हिन्दी", dir:"ltr",
+  title:"Centela गोपनीयता नीति",
+  tag:"आपके फ़ोन के अंदर ही काम करने वाली धोखाधड़ी-रोधी सुरक्षा।",
+  updated:"अंतिम अपडेट: 22 जून 2026",
+  langlabel:"भाषा:",
+  summary:"<b>संक्षेप में:</b> Centela संदेश, लिंक, नंबर और स्क्रीनशॉट का विश्लेषण <b>आपके फ़ोन के अंदर</b> करता है। हम आपके संदेश, SMS, संपर्क या निजी डेटा किसी सर्वर पर <b>कभी नहीं भेजते</b>। कोई उपयोगकर्ता खाता नहीं। हम डेटा नहीं बेचते। न विज्ञापन, न ट्रैकर।",
+  sections:[
+    {h:"हम कौन हैं", html:"Centela एक स्वतंत्र रूप से विकसित, Android के लिए धोखाधड़ी-रोधी ऐप है। कोई साइन-अप या खाता ज़रूरी नहीं। गोपनीयता संबंधी किसी भी प्रश्न के लिए लिखें: "+mail+"।"},
+    {h:"हमारा सिद्धांत: सब कुछ आपके डिवाइस पर", html:"संदेश, लिंक, फ़ोन नंबर और छवि के टेक्स्ट का विश्लेषण <b>पूरी तरह आपके फ़ोन पर</b> होता है। Centela के पास आपका डेटा रखने वाले <b>कोई सर्वर नहीं</b> हैं और <b>कोई उपयोगकर्ता खाता नहीं</b> है। जो आपके फ़ोन में है, वह आपके फ़ोन में ही रहता है।"},
+    {h:"वह डेटा जो हम एकत्र नहीं करते", html:"<ul><li>हम आपके SMS या संदेशों की सामग्री किसी सर्वर पर नहीं भेजते।</li><li>हम आपके संपर्कों तक पहुँच या उन्हें अपलोड नहीं करते।</li><li>हम आपका स्थान, पहचान या गतिविधि एकत्र नहीं करते।</li><li>कोई तृतीय-पक्ष विज्ञापन या ट्रैकर नहीं।</li><li>कोई प्रोफ़ाइल नहीं, कोई जानकारी बेचना नहीं।</li></ul>"},
+    {h:"Centela क्या प्रोसेस करता है (स्थानीय रूप से)", html:"आपकी सुरक्षा के लिए Centela आपके डिवाइस पर जाँचता है: वह टेक्स्ट जो आप पेस्ट या साझा करते हैं, आपके SMS (अनुमति मिलने पर), मैसेजिंग ऐप की सूचनाएँ, आने वाली कॉल का नंबर, और चुने गए स्क्रीनशॉट या फ़ोटो का टेक्स्ट (OCR)। यह प्रोसेसिंग अस्थायी और स्थानीय है; इसे भेजा नहीं जाता।"},
+    {h:"हम कौन-सी अनुमतियाँ माँगते हैं और क्यों", html:"<ul><li><span class='perm'>SMS पढ़ना</span>: धोखाधड़ी के लिए पुराने SMS की जाँच <em>केवल आपके फ़ोन पर</em>। सामग्री डिवाइस नहीं छोड़ती। "+OK("स्थानीय")+"</li><li><span class='perm'>सूचना एक्सेस</span>: ताकि शील्ड आने वाले संदेशों (WhatsApp, SMS…) का विश्लेषण कर आपको आगाह करे। "+OK("स्थानीय")+"</li><li><span class='perm'>कॉल फ़िल्टर</span>: नंबर की प्रतिष्ठा जाँचना और उत्तर देने से पहले संभावित स्पैम से आगाह करना।</li><li><span class='perm'>कैमरा और फ़ाइलें</span>: आपके चुने स्क्रीनशॉट या फ़ोटो का टेक्स्ट पढ़ना। छवियाँ अपलोड नहीं होतीं। "+OK("स्थानीय")+"</li><li><span class='perm'>सूचनाएँ</span>: ख़तरे और सुरक्षा के अलर्ट दिखाना।</li><li><span class='perm'>अपडेट इंस्टॉल करना</span>: ताकि Centela ख़ुद अपडेट हो सके।</li><li><span class='perm'>इंटरनेट</span>: पहचान सुधार और अपडेट डाउनलोड करना (नीचे देखें)।</li></ul>"},
+    {h:"इंटरनेट कनेक्शन", html:"Centela इंटरनेट का उपयोग <b>आपके फ़ोन पर डाउनलोड</b> के लिए करता है: ज्ञात धोखाधड़ी सूचियाँ, ऐप अपडेट, और सक्षम फ़ोनों पर वैकल्पिक AI मॉडल। ये डाउनलोड हैं; <b>आपका कोई डेटा अपलोड नहीं होता</b>।<br><br><b>नंबर प्रतिष्ठा "+WARN("अपवाद")+":</b> जब <em>आप</em> ऐप में कोई नंबर खोजते हैं, Centela एक सार्वजनिक प्रतिष्ठा सेवा (responderono.es, listaspam.com) से पूछता है और <em>केवल वही नंबर</em> भेजता है। <b>आने वाली कॉलों</b> के लिए यह जाँच <b>डिफ़ॉल्ट रूप से बंद</b> है: यह तभी चलती है जब आप इसे चालू करें; अन्यथा कॉल केवल आपके फ़ोन पर वर्गीकृत होती है। आपके संपर्क या अन्य डेटा कभी नहीं भेजे जाते।"},
+    {h:"आपके डिवाइस पर क्या संग्रहीत होता है", html:"Centela अलर्ट न दोहराने और सुधार के लिए विश्लेषण का <b>स्थानीय इतिहास</b> रखता है। गोपनीयता हेतु यह एक <b>फ़िंगरप्रिंट (हैश)</b> और छोटा पूर्वावलोकन रखता है, <b>पूरा टेक्स्ट नहीं</b>। यह डेटा आपके फ़ोन में रहता है और <b>अनइंस्टॉल पर मिट जाता है</b>। आप इतिहास ऐप से भी साफ़ कर सकते हैं।"},
+    {h:"न विज्ञापन, न ट्रैकर", html:"Centela में कोई विज्ञापन, विज्ञापन SDK, ट्रैकिंग बीकन या तृतीय-पक्ष एनालिटिक्स नहीं है। आपके डेटा के लिए हमें कोई भुगतान नहीं करता, क्योंकि हम उसे एकत्र ही नहीं करते।"},
+    {h:"बच्चे और हर उम्र", html:"Centela हर उम्र के लोगों को धोखाधड़ी से बचाने के लिए बनाई गई है और कोई निजी डेटा एकत्र नहीं करती, इसलिए यह बच्चों और बुज़ुर्गों सहित सभी के लिए उपयुक्त है।"},
+    {h:"आपके अधिकार (GDPR)", html:"चूँकि Centela <b>आपका कोई निजी डेटा किसी सर्वर पर संग्रहीत नहीं करती</b>, नियंत्रण पूरी तरह आपके पास है: डेटा केवल आपके डिवाइस पर है। आप <b>ऐप में इतिहास साफ़ करके या उसे अनइंस्टॉल करके</b> तुरंत अपने एक्सेस, सुधार और मिटाने के अधिकार का प्रयोग कर सकते हैं। संदेह हो तो लिखें: "+mail+"।"},
+    {h:"सुरक्षा", html:"स्थानीय विश्लेषण आपके डेटा के जोखिम को न्यूनतम करता है। डाउनलोड एन्क्रिप्टेड कनेक्शन (HTTPS) से होते हैं और उनकी अखंडता जाँची जाती है। ऐप छेड़छाड़ की गई प्रतियों का पता लगाने के लिए अपने हस्ताक्षर की जाँच करता है।"},
+    {h:"इस नीति में बदलाव", html:"यदि हम यह नीति बदलते हैं, तो इस पृष्ठ और इसकी तिथि को अपडेट करेंगे। महत्वपूर्ण बदलाव यहाँ दिखेंगे।"},
+    {h:"संपर्क", html:"गोपनीयता संबंधी किसी भी प्रश्न के लिए: "+mail+"।"}
+  ],
+  footer:"Centela — डिवाइस पर धोखाधड़ी-रोधी। यह पृष्ठ सूचना हेतु है और कानूनी सलाह नहीं है।"
+},
 
+zh:{ name:"中文", dir:"ltr",
+  title:"Centela 隐私政策",
+  tag:"在你手机内部运行的反欺诈保护。",
+  updated:"最后更新：2026 年 6 月 22 日",
+  langlabel:"语言：",
+  summary:"<b>简而言之：</b>Centela <b>在你的手机内部</b>分析消息、链接、号码和截图。我们<b>绝不</b>将你的消息、短信、联系人或个人数据发送到任何服务器。没有用户账户。我们不出售数据。无广告、无追踪。",
+  sections:[
+    {h:"我们是谁", html:"Centela 是一款独立开发的 Android 反欺诈应用。无需注册或账户。隐私相关问题请联系 "+mail+"。"},
+    {h:"我们的原则：一切都在你的设备上进行", html:"对消息、链接、电话号码和图片文字的分析<b>完全在你的手机上</b>完成。Centela <b>没有任何存储你数据的服务器</b>，也<b>没有用户账户</b>。留在你手机里的，就留在你手机里。"},
+    {h:"我们不收集的数据", html:"<ul><li>我们绝不会把你的短信或消息内容发送到任何服务器。</li><li>我们不访问也不上传你的联系人。</li><li>我们不收集你的位置、身份或活动。</li><li>没有第三方广告或追踪器。</li><li>不建立画像，不出售信息。</li></ul>"},
+    {h:"Centela 处理什么（本地）", html:"为保护你，Centela 在你的设备上检查：你粘贴或分享的文本、你的短信（在授权后）、消息应用的通知、来电号码，以及你选择的截图或照片中的文字（OCR）。该处理是临时且本地的，不会被传输。"},
+    {h:"我们申请的权限及原因", html:"<ul><li><span class='perm'>读取短信</span>：<em>仅在你的手机上</em>检查旧短信是否有欺诈。内容不离开设备。"+OK("本地")+"</li><li><span class='perm'>通知使用权</span>：让防护盾分析来消息（WhatsApp、短信…）并提醒你。"+OK("本地")+"</li><li><span class='perm'>来电过滤</span>：在你接听前检查号码信誉并提醒可能的垃圾来电。</li><li><span class='perm'>相机和文件</span>：读取你选择分析的截图或照片中的文字。图片不会上传。"+OK("本地")+"</li><li><span class='perm'>通知</span>：向你显示危险与保护提醒。</li><li><span class='perm'>安装更新</span>：让 Centela 能自我更新。</li><li><span class='perm'>互联网</span>：下载检测改进与更新（见下文）。</li></ul>"},
+    {h:"互联网连接", html:"Centela 使用互联网<b>向你的手机下载</b>：已知欺诈名单、应用更新，以及在合适的手机上下载可选的 AI 模型。这些都是下载；<b>不会上传你的任何数据</b>。<br><br><b>号码信誉 "+WARN("例外")+"：</b>当<em>你</em>在应用中查询某个号码时，Centela 会查询一个公开的信誉网站（responderono.es、listaspam.com），并<em>仅发送该号码</em>。对于<b>来电</b>，此查询<b>默认关闭</b>：仅在你启用时才执行；否则来电仅在你的手机上分类。绝不会发送你的联系人或其他数据。"},
+    {h:"设备上存储了什么", html:"Centela 保留分析的<b>本地历史</b>，以避免重复提醒并不断改进。出于隐私，它存储的是<b>指纹（哈希）</b>和简短预览，<b>而非完整文本</b>。这些数据存在你的手机上，<b>卸载即删除</b>。你也可以在应用内清除历史。"},
+    {h:"无广告、无追踪", html:"Centela 不含广告、广告 SDK、追踪信标或第三方分析。没有人为你的数据付钱给我们，因为我们根本不收集。"},
+    {h:"儿童与所有年龄", html:"Centela 旨在保护任何年龄的人免受欺诈，且不收集个人数据，因此适合所有人，包括儿童和老年人。"},
+    {h:"你的权利（GDPR）", html:"由于 Centela <b>不在任何服务器上存储你的个人数据</b>，控制权完全在你：数据只在你的设备上。你可以通过<b>在应用内清除历史或卸载应用</b>立即行使访问、更正和删除的权利。如有疑问请联系 "+mail+"。"},
+    {h:"安全", html:"本地分析将你数据的暴露降到最低。下载使用加密连接（HTTPS）并校验完整性。应用会检查自身签名，以发现被篡改的副本。"},
+    {h:"本政策的变更", html:"若我们修改本政策，将更新本页面及其日期。重大变更将在此体现。"},
+    {h:"联系", html:"任何隐私问题请联系："+mail+"。"}
+  ],
+  footer:"Centela — 设备端反欺诈。本页仅供参考，不构成法律意见。"
+}
+};
+
+const ORDER = ["es","en","fr","pl","ru","hi","zh"];
+
+function render(lang){
+  const d = T[lang] || T.es;
+  document.documentElement.lang = lang;
+  document.documentElement.dir = d.dir || "ltr";
+  document.getElementById("t-title").textContent = d.title;
+  document.getElementById("t-tag").textContent = d.tag;
+  document.getElementById("t-langlabel").textContent = d.langlabel;
+  document.getElementById("t-updated").innerHTML = "<em>"+d.updated+"</em>";
+  document.getElementById("t-summary").innerHTML = d.summary;
+  document.getElementById("content").innerHTML = d.sections.map(function(s,i){
+    return '<section class="card"><h2><span class="n">'+(i+1)+'.</span>'+s.h+'</h2>'+s.html+'</section>';
+  }).join("");
+  document.getElementById("t-footer").innerHTML = d.footer;
+  document.title = d.title;
+  Array.prototype.forEach.call(document.querySelectorAll(".lang"), function(b){
+    b.setAttribute("aria-pressed", b.dataset.l === lang ? "true":"false");
+  });
+  try{ history.replaceState(null,"","#"+lang); }catch(e){}
+}
+
+(function init(){
+  const btns = document.getElementById("langbtns");
+  btns.innerHTML = ORDER.map(function(l){
+    return '<button class="lang" data-l="'+l+'" type="button">'+T[l].name+'</button>';
+  }).join(" ");
+  Array.prototype.forEach.call(document.querySelectorAll(".lang"), function(b){
+    b.addEventListener("click", function(){ render(b.dataset.l); });
+  });
+  const hash = (location.hash||"").replace("#","");
+  const nav = (navigator.language||"es").slice(0,2).toLowerCase();
+  const lang = T[hash] ? hash : (T[nav] ? nav : "es");
+  render(lang);
+})();
+</script>
 </body>
 </html>
