@@ -1,5 +1,5 @@
 {
-  "version": 20261022,
+  "version": 20261023,
   "entities": [
     "vodafone",
     "movistar",
@@ -1044,6 +1044,7 @@
     "021lm.com",
     "02213.pages.net.br",
     "02221203252120.duckdns.org",
+    "022222222z222234.vercel.app",
     "0228zc.pages.dev",
     "022994.com",
     "022ab56b0c762b819b03769772ddb4d8-dot-gle9392420309493993.rj.r.appspot.com",
@@ -1940,7 +1941,6 @@
     "08kjvt7r.square.site",
     "08mja96c.duckdns.org",
     "08pwhbkjj0hg7hi5etdl.qwo231sdx.club",
-    "08q6x2-xgy2-77wm8r-lgt-w1pzws.pages.dev",
     "08t-78yguhjebsftuyiuoiespodfiuhjldklg.vercel.app",
     "08uc8kdodeek.qwo231sdx.club",
     "08us4w085ps.shop",
@@ -4412,7 +4412,6 @@
     "12990388.weebly.com",
     "129c3fbe.htengsc.com",
     "129cdn.fu109cn.workers.dev",
-    "12a1wza1aa.pages.dev",
     "12ac188c.vsdjyumne.org.cn",
     "12ae6d37-c2fd-4756-8b46-ec7f713706cc-00-kmgcnsh8wqya.kirk.replit.dev",
     "12b87143-fa33-4c68-a77b-945fc384238b.usrfiles.com",
@@ -4586,7 +4585,6 @@
     "134-209-108-249.cprapid.com",
     "134-209-209-240.cprapid.com",
     "1341456241651dy13.blob.core.windows.net",
-    "1342796343837374.6583349354412048645696401555924s2nnms90n.workers.dev",
     "13445781.bk67n.icu",
     "13448.top",
     "134508.com",
@@ -6487,6 +6485,8 @@
     "1dq7vtv.qwo231sdx.club",
     "1driv3.short.gy",
     "1drive.duckdns.org",
-    "1drivefiles.co"
+    "1drivefiles.co",
+    "1drivefiles.org",
+    "1drivems.click"
   ]
 }
