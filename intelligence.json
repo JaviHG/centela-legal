@@ -1,5 +1,5 @@
 {
-  "version": 20261028,
+  "version": 20261029,
   "entities": [
     "vodafone",
     "movistar",
@@ -2430,7 +2430,6 @@
     "0fecb5c.wcomhost.com",
     "0ff1c.s3.us-east-2.amazonaws.com",
     "0ff1ce.duckdns.org",
-    "0ff1ce365.com",
     "0ff2436.wcomhost.com",
     "0ff3ce.com",
     "0ff45719-2e69-4ef0-91bd-4c01bce3f5ab-00-325o1z1mbm1cf.spock.replit.dev",
@@ -6487,6 +6486,7 @@
     "1drive.duckdns.org",
     "1drivefiles.co",
     "1drivefiles.org",
-    "1drivems.click"
+    "1drivems.click",
+    "1drivemss.click"
   ]
 }
