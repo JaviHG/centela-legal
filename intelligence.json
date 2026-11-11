@@ -1,5 +1,5 @@
 {
-  "version": 20261110,
+  "version": 20261111,
   "entities": [
     "vodafone",
     "movistar",
@@ -1209,6 +1209,7 @@
     "0354b18c6589cab5c616391426d071dd-dot-gle9392420309493993.rj.r.appspot.com",
     "035508045747058.kitlanchesisa.com.br",
     "0356.service-helvetia.com",
+    "0358bet.com",
     "0359.pages.net.br",
     "0365-update.s3.br-sao.cloud-object-storage.appdomain.cloud",
     "0365.microsoftonedrive.workers.dev",
@@ -3370,6 +3371,7 @@
     "101135858098427-dot-ifile-document.appspot.com",
     "1011366965210012223652121.com",
     "10114updaterestricaccounth.start.page",
+    "1011fr3-6z19umsj.4everland.app",
     "1012.njki091.workers.dev",
     "1012.ofertdisneplus.com",
     "101235458336404.ga",
@@ -4541,6 +4543,7 @@
     "1314ssc.net",
     "1315548565530810ar.duckdns.org",
     "131588993-887995028116217212.preview.editmysite.com",
+    "1318841.us23.myftpupload.com",
     "131987449-518886016577583774.preview.editmysite.com",
     "131alro.stairliftmobility.co.uk",
     "131ecom.com",
@@ -6484,9 +6487,6 @@
     "1dq7vtv.qwo231sdx.club",
     "1driv3.short.gy",
     "1drive.duckdns.org",
-    "1drivefiles.co",
-    "1drivefiles.org",
-    "1drivems.click",
-    "1drivemss.click"
+    "1drivefiles.co"
   ]
 }
