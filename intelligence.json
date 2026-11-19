@@ -1,5 +1,5 @@
 {
-  "version": 20261118,
+  "version": 20261119,
   "entities": [
     "vodafone",
     "movistar",
@@ -2103,6 +2103,7 @@
     "0a.a1-b2.my.id",
     "0a.uahucjziq8660.workers.dev",
     "0a0095f2-e988-42be-ae62-fa268b0b085c.usrfiles.com",
+    "0a09c-j80-i4cx-mvyql-20-09-2026-aa.pages.dev",
     "0a11s58s8s8qqq.ga",
     "0a137221-59d7-470e-b49d-6ddf11a6d214.usrfiles.com",
     "0a187052.89dduvdjsi.shop",
@@ -4658,7 +4659,6 @@
     "139697891382073816098494524845801114.hanefra7bikiemta.com",
     "139kk.shop",
     "13a2-52-161-98-209.ngrok.io",
-    "13abdjalile.github.io",
     "13afx.top",
     "13akersdozenonline.com",
     "13app.trk.elasticemail.com",
@@ -6277,6 +6277,8 @@
     "1auth-session-timedout-naver.firebaseapp.com",
     "1auth-session-timedout-naver.web.app",
     "1authwebtd.com",
+    "1avpc1-cma00uzf0-intelligence-agentic-models.vercel.app",
+    "1avpc1.vercel.app",
     "1axpsacct-vrfymail.com",
     "1ayanann-d4na.clickkc.cloud",
     "1b0a9154.txat99.net",
@@ -6485,8 +6487,6 @@
     "1dq7vtv.qwo231sdx.club",
     "1driv3.short.gy",
     "1drive.duckdns.org",
-    "1drivefiles.co",
-    "1drivefiles.org",
-    "1drivems.click"
+    "1drivefiles.co"
   ]
 }
